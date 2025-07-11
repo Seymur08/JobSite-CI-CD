@@ -1,0 +1,153 @@
+.main-panel {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+.panel-left {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 40px;
+    width: 15%;
+    gap: 20px;
+    height: auto;
+    background-color: #0059ff80;
+    align-items: center;
+
+}
+
+
+.Link-btn-box {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 10px;
+    width: 100%;
+    align-items: flex-end;
+    padding-top: 10px;
+    padding-bottom: 20px;
+
+}
+
+
+.Link-btn-in {
+    width: 80%;
+    display: flex;
+    justify-content: left;
+    background-color: transparent;
+    padding-left: 30px;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    border-radius: 15px 0 0 15px;
+    border-top-right-radius: -30px;
+    border-right: 0;
+    height: 45px;
+    font-size: 18px;
+    color: white;
+
+}
+
+
+.sidebar-link-in::after {
+    content: '';
+    position: absolute;
+    right: -10px;
+    top: 0;
+    height: 100%;
+    width: 20px;
+    background-color: #3b82f6;
+    border-top-left-radius: 999px;
+    border-bottom-left-radius: 999px;
+    z-index: -1;
+}
+
+
+.Link-btn-in.active {
+    background-color: #2e2e2e;
+    color: white;
+}
+
+
+/* 
+.img-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 150px;
+}
+
+.img-box-img {
+    width: 120px;
+    height: 150px;
+
+
+}
+
+.Image {
+    width: 120px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    object-fit: cover;
+}
+
+.Image-update {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    bottom: 0;
+    right: 0;
+    z-index: 2000;
+    cursor: pointer;
+} */
+
+.img-box {
+    position: relative;
+    width: 100px;
+    text-align: center;
+    /* background-color: red; */
+}
+
+.img-box-img {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+}
+
+.Image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 50%;
+}
+
+.Image-update {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+
+.panel-right {
+    /* margin-top: 50px; */
+    width: 85%;
+    height: auto;
+
+}
+
+/* /////////////////////////////////////////////////////////////////////////// */

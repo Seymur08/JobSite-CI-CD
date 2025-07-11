@@ -1,0 +1,155 @@
+.mainpanel {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+.panelleft {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 40px;
+    width: 15%;
+    gap: 20px;
+    height: auto;
+    background-color: rgba(69, 159, 211, 0.501);
+    align-items: center;
+
+}
+
+
+.Linkbtnbox {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 20px;
+    width: 100%;
+    align-items: flex-end;
+    padding-top: 10px;
+    padding-bottom: 20px;
+
+}
+
+
+.Linkbtnin {
+    width: 80%;
+    display: flex;
+    justify-content: left;
+    background-color: transparent;
+    padding-left: 30px;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    border-radius: 15px 0 0 15px;
+    border-top-right-radius: -30px;
+    border-right: 0;
+    height: 45px;
+    font-size: 18px;
+    color: white;
+
+}
+
+
+.sidebarlinkin::after {
+    content: '';
+    position: absolute;
+    right: -10px;
+    top: 0;
+    height: 90%;
+    width: 20px;
+    background-color: #3b82f6;
+    border-top-left-radius: 999px;
+    border-bottom-left-radius: 999px;
+    z-index: -1;
+}
+
+
+.Linkbtnin.active {
+    background-color: #2e2e2e;
+    color: white;
+}
+
+
+/* 
+.imgbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 110px;
+    width: 100px;
+    background-color: red;
+}
+
+.imgboximg {
+    position: relative;
+    width: 90px;
+    height: 90px;
+}
+
+.Image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
+.Imageupdate {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+} */
+
+
+
+.img-box {
+    position: relative;
+    width: 100px;
+    text-align: center;
+    /* background-color: red; */
+}
+
+.img-box-img {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+}
+
+.Image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 50%;
+}
+
+.Image-update {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+
+
+
+.panelright {
+    /* margin-top: 50px; */
+    width: 85%;
+    height: 90vh;
+
+}
+
+/* /////////////////////////////////////////////////////////////////////////// */

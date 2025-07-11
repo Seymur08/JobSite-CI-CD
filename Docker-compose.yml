@@ -1,0 +1,52 @@
+version: "3.8"
+
+services:
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2022-CU13-ubuntu-20.04
+    container_name: mssql
+    restart: always
+    ports:
+      - "1433:1433"
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "MyStrong!Passw0rd"
+    volumes:
+      - mssql_data:/var/opt/mssql
+
+  api:
+    # build: ./Job_Site
+    image: seymur08/jobsite-api
+    # container_name: api
+    restart: always
+    ports:
+      - "5156:8080"
+    depends_on:
+      - mssql
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__DefaultConnection: "Server=mssql;Database=CopyJobSite;User Id=sa;Password=MyStrong!Passw0rd;TrustServerCertificate=True;"
+
+  frontend:
+    # build: ./Job-site
+    image: seymur08/jobsite-frontend
+    # container_name: frontend
+    restart: always
+    ports:
+      - "5173:5173"
+    depends_on:
+      - api
+    volumes:
+      - ./Job-site:/app-service-frontend
+      - /app-service-frontend/node_modules
+
+  adminer:
+    image: adminer
+    container_name: adminer
+    restart: always
+    depends_on:
+      - mssql
+    ports:
+      - "5000:8080"
+
+volumes:
+  mssql_data:

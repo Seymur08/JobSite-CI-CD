@@ -1,0 +1,266 @@
+[
+    {
+        "id": 1,
+        "name": "Bakı"
+    },
+    {
+        "id": 2,
+        "name": "Sumqayıt"
+    },
+    {
+        "id": 3,
+        "name": "Abşeron"
+    },
+    {
+        "id": 4,
+        "name": "Ağcabədi"
+    },
+    {
+        "id": 5,
+        "name": "Ağdam"
+    },
+    {
+        "id": 6,
+        "name": "Ağdaş"
+    },
+    {
+        "id": 7,
+        "name": "Ağstafa"
+    },
+    {
+        "id": 8,
+        "name": "Astara"
+    },
+    {
+        "id": 9,
+        "name": "Babək"
+    },
+    {
+        "id": 10,
+        "name": "Balakən"
+    },
+    {
+        "id": 11,
+        "name": "Bərdə"
+    },
+    {
+        "id": 12,
+        "name": "Beyləqan"
+    },
+    {
+        "id": 13,
+        "name": "Biləsuvar"
+    },
+    {
+        "id": 14,
+        "name": "Cəbrayıl"
+    },
+    {
+        "id": 15,
+        "name": "Cəlilabad"
+    },
+    {
+        "id": 16,
+        "name": "Daşkəsən"
+    },
+    {
+        "id": 17,
+        "name": "Füzuli"
+    },
+    {
+        "id": 18,
+        "name": "Gədəbəy"
+    },
+    {
+        "id": 19,
+        "name": "Goranboy"
+    },
+    {
+        "id": 20,
+        "name": "Göyçay"
+    },
+    {
+        "id": 21,
+        "name": "Göygöl"
+    },
+    {
+        "id": 22,
+        "name": "Hacıqabul"
+    },
+    {
+        "id": 23,
+        "name": "Xaçmaz"
+    },
+    {
+        "id": 24,
+        "name": "Xızı"
+    },
+    {
+        "id": 25,
+        "name": "Xocalı"
+    },
+    {
+        "id": 26,
+        "name": "Xocavənd"
+    },
+    {
+        "id": 27,
+        "name": "İmişli"
+    },
+    {
+        "id": 28,
+        "name": "İsmayıllı"
+    },
+    {
+        "id": 29,
+        "name": "Kəlbəcər"
+    },
+    {
+        "id": 30,
+        "name": "Kəngərli"
+    },
+    {
+        "id": 31,
+        "name": "Kürdəmir"
+    },
+    {
+        "id": 32,
+        "name": "Qax"
+    },
+    {
+        "id": 33,
+        "name": "Qazax"
+    },
+    {
+        "id": 34,
+        "name": "Qəbələ"
+    },
+    {
+        "id": 35,
+        "name": "Qobustan"
+    },
+    {
+        "id": 36,
+        "name": "Quba"
+    },
+    {
+        "id": 37,
+        "name": "Qubadlı"
+    },
+    {
+        "id": 38,
+        "name": "Qusar"
+    },
+    {
+        "id": 39,
+        "name": "Laçın"
+    },
+    {
+        "id": 40,
+        "name": "Lerik"
+    },
+    {
+        "id": 41,
+        "name": "Lənkəran"
+    },
+    {
+        "id": 42,
+        "name": "Masallı"
+    },
+    {
+        "id": 43,
+        "name": "Neftçala"
+    },
+    {
+        "id": 44,
+        "name": "Oğuz"
+    },
+    {
+        "id": 45,
+        "name": "Ordubad"
+    },
+    {
+        "id": 46,
+        "name": "Saatlı"
+    },
+    {
+        "id": 47,
+        "name": "Sabirabad"
+    },
+    {
+        "id": 48,
+        "name": "Sədərək"
+    },
+    {
+        "id": 49,
+        "name": "Salyan"
+    },
+    {
+        "id": 50,
+        "name": "Samux"
+    },
+    {
+        "id": 51,
+        "name": "Siyəzən"
+    },
+    {
+        "id": 52,
+        "name": "Şabran"
+    },
+    {
+        "id": 53,
+        "name": "Şahbuz"
+    },
+    {
+        "id": 54,
+        "name": "Şamaxı"
+    },
+    {
+        "id": 55,
+        "name": "Şəki"
+    },
+    {
+        "id": 56,
+        "name": "Şəmkir"
+    },
+    {
+        "id": 57,
+        "name": "Şərur"
+    },
+    {
+        "id": 58,
+        "name": "Şuşa"
+    },
+    {
+        "id": 59,
+        "name": "Tərtər"
+    },
+    {
+        "id": 60,
+        "name": "Tovuz"
+    },
+    {
+        "id": 61,
+        "name": "Ucar"
+    },
+    {
+        "id": 62,
+        "name": "Yardımlı"
+    },
+    {
+        "id": 63,
+        "name": "Yevlax"
+    },
+    {
+        "id": 64,
+        "name": "Zaqatala"
+    },
+    {
+        "id": 65,
+        "name": "Zəngilan"
+    },
+    {
+        "id": 66,
+        "name": "Zərdab"
+    }
+]

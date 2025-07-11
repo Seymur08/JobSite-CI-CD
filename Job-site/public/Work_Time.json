@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "isBaslamaSaati": "05:00"
+    },
+    {
+        "id": 2,
+        "isBaslamaSaati": "06:00"
+    },
+    {
+        "id": 3,
+        "isBaslamaSaati": "07:00"
+    },
+    {
+        "id": 4,
+        "isBaslamaSaati": "08:00"
+    },
+    {
+        "id": 5,
+        "isBaslamaSaati": "09:00"
+    },
+    {
+        "id": 6,
+        "isBaslamaSaati": "10:00"
+    },
+    {
+        "id": 7,
+        "isBaslamaSaati": "11:00"
+    },
+    {
+        "id": 8,
+        "isBaslamaSaati": "12:00"
+    },
+    {
+        "id": 9,
+        "isBaslamaSaati": "13:00"
+    },
+    {
+        "id": 10,
+        "isBaslamaSaati": "14:00"
+    },
+    {
+        "id": 11,
+        "isBaslamaSaati": "15:00"
+    },
+    {
+        "id": 12,
+        "isBaslamaSaati": "16:00"
+    },
+    {
+        "id": 13,
+        "isBaslamaSaati": "17:00"
+    },
+    {
+        "id": 14,
+        "isBaslamaSaati": "18:00"
+    }
+]

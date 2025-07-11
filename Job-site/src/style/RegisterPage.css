@@ -1,0 +1,133 @@
+.Register-Page {
+
+    /* display: flex; */
+    position: relative;
+    width: 100%;
+    height: 88vh;
+    /* overflow: hidden; */
+    /* background-color: red; */
+}
+
+.Register-Page img {
+
+    width: 100%;
+    /* margin-top: 10px; */
+    height: 88vh;
+    /* object-fit: cover; */
+    margin-bottom: 50px;
+}
+
+
+.Register-Page-Form {
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    width: 500px;
+    height: auto;
+    position: absolute;
+    top: 5px;
+    left: 120px;
+    /* margin-bottom: 20px; */
+    border: 10px double white;
+    border-radius: 12px;
+    /* background: rgba(255, 255, 255, 0.1); */
+    backdrop-filter: blur(10px);
+    background-color: rgb(47, 48, 49);
+
+    h2 {
+
+        margin-top: 10px;
+        font-size: 30px;
+        color: rgb(208, 206, 206);
+    }
+
+}
+
+.Register-Page-Form-in {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    input {
+        width: 360px;
+        height: 35px;
+        border-radius: 0px;
+        /* border-radius: 8px; */
+        /* border: 2px solid #0940f3; */
+        border: none;
+        border-bottom: 2px solid white;
+        color: white;
+        background-color: transparent;
+        /* outline: none; */
+        /* padding: 8px; */
+        font-size: 15px;
+        padding: 0px 14px;
+
+        placeholder {
+            color: red;
+        }
+    }
+
+    select {
+        border: none;
+        width: 360px;
+        height: 35px;
+        outline: none;
+        padding: 8px;
+        background-color: transparent;
+        border-bottom: 2px solid white;
+        color: white;
+
+
+        /* border-radius: 8px; */
+        /* font-size: 15px; */
+        /* border: 2px solid #0940f3; */
+        padding: 0px 10px;
+
+        option {
+            color: white;
+            background-color: #2b2a28;
+        }
+
+
+    }
+
+    button {
+        width: 360px;
+        height: 40px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        font-size: 17px;
+        border: 3px solid #0940f3;
+    }
+}
+
+input:focus {
+    outline: none;
+
+}
+
+input::placeholder {
+    color: White;
+    /* istədiyin rəng */
+    opacity: 1;
+    /* bəzi brauzerlərdə şəffaflığı azaltmasın deyə */
+}
+
+
+.lite {
+    width: 100px;
+    height: 2px;
+    background-color: red;
+}
+
+
+.Register-Page-Form-in button:hover {
+    background-color: #0f0064;
+    color: white;
+}

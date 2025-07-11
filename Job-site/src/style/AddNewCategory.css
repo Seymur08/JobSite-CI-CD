@@ -1,0 +1,91 @@
+.category-page {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: auto;
+    height: 90vh;
+    /* background-color: #1456e3; */
+}
+
+.category-page-center {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    border: 2px solid blue;
+
+    input {
+        width: 350px;
+        height: 35px;
+        font-size: 20px;
+        border-radius: 8px;
+        border: 2px solid blue;
+    }
+
+    select {
+        font-size: 20px;
+
+    }
+}
+
+#form-category {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    h1 {
+        color: wheat;
+    }
+
+    select {
+        width: 350px;
+        height: 35px;
+        border-radius: 8px;
+        border: 2px solid blue;
+    }
+
+    input {
+        padding-left: 10px;
+    }
+
+}
+
+
+#checkbox {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    input {
+        width: 20px;
+    }
+
+    h3 {
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+}
+
+
+.category-page-button {
+    display: flex;
+    justify-content: space-between;
+
+    button {
+        font-size: 18px;
+        width: 120px;
+        height: 35px;
+        border-radius: 8px;
+        border: 2px solid blue;
+        background-color: dodgerblue;
+        color: white;
+    }
+
+    h3 {
+        color: white;
+    }
+}

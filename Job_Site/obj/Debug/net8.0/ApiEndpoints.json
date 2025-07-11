@@ -1,0 +1,998 @@
+[
+  {
+    "ContainingType": "Job_Site.Controllers.AdminController",
+    "Method": "AddNewCategory",
+    "RelativePath": "api/Admin/AddNewCategory",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "requestCategory",
+        "Type": "Job_Site.Dtos.RequestCategory",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Job_Site.Controllers.AdminController",
+    "Method": "AllBlokedEmployer",
+    "RelativePath": "api/Admin/AllBlokedEmployer",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Job_Site.Dtos.EmployerJobListDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Job_Site.Controllers.AdminController",
+    "Method": "AllBlokedWorker",
+    "RelativePath": "api/Admin/AllBlokedWorker",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Job_Site.Dtos.WorkerJobLisDto, Job_Site, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Job_Site.Controllers.AdminController",
+    "Method": "ChangeStatusEmployer",
+    "RelativePath": "api/Admin/ChangeStatusEmployer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "statusCodeDto",
+        "Type": "Job_Site.Dtos.StatusCodeDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Job_Site.Controllers.AdminController",
+    "Method": "ChangeStatusWorker",
+    "RelativePath": "api/Admin/ChangeStatusWorker",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "statusCodeDto",
+        "Type": "Job_Site.Dtos.StatusCodeDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Job_Site.Controllers.AdminController",
+    "Method": "GetAllCategoryEmployer",
+    "RelativePath": "api/Admin/GetAllCategoryEmployer",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Job_Site.Models.Categorys.WorkerCategory",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Job_Site.Controllers.AdminController",
+    "Method": "GetAllCategoryWorker",
+    "RelativePath": "api/Admin/GetAllCategoryWorker",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Job_Site.Models.Categorys.WorkerCategory",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Job_Site.Controllers.AdminController",
+    "Method": "GetAllEmployers",
+    "RelativePath": "api/Admin/GetAllEmployers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Job_Site.Dtos.EmployerJobListDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Job_Site.Controllers.AdminController",
+    "Method": "GetAllEmployersStatus",
+    "RelativePath": "api/Admin/GetAllEmployersStatus",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Job_Site.Dtos.EmployerJobListDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Job_Site.Controllers.AdminController",
+    "Method": "GetAllWorkers",
+    "RelativePath": "api/Admin/GetAllWorkers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Job_Site.Dtos.WorkerJobLisDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Job_Site.Controllers.AdminController",
+    "Method": "GetAllWorkersStatus",
+    "RelativePath": "api/Admin/GetAllWorkersStatus",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Job_Site.Dtos.WorkerJobLisDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Job_Site.Controllers.AdminController",
+    "Method": "Login",
+    "RelativePath": "api/Admin/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginReguestDto",
+        "Type": "Job_Site.Dtos.LoginReguestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Job_Site.Controllers.AdminController",
+    "Method": "ToWarnUser",
+    "RelativePath": "api/Admin/ToWarnUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ASP_.NET_WEP_API_JWT.Controllers.Auth.AuthController",
+    "Method": "ChangePasswordUser",
+    "RelativePath": "api/Auth/ChangePasswordUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "passwordChange",
+        "Type": "Job_Site.Dtos.PasswordChangeDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ASP_.NET_WEP_API_JWT.DTOs.Auth.AuthTokenDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ASP_.NET_WEP_API_JWT.Controllers.Auth.AuthController",
+    "Method": "ForgetPasswordChange",
+    "RelativePath": "api/Auth/check",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "password",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ASP_.NET_WEP_API_JWT.DTOs.Auth.AuthTokenDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ASP_.NET_WEP_API_JWT.Controllers.Auth.AuthController",
+    "Method": "ControlForgetForUser",
+    "RelativePath": "api/Auth/ControlForgetForUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "controlForget",
+        "Type": "Job_Site.Dtos.ControlForgetPassword",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ASP_.NET_WEP_API_JWT.DTOs.Auth.AuthTokenDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ASP_.NET_WEP_API_JWT.Controllers.Auth.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginReguest",
+        "Type": "Job_Site.Dtos.LoginReguestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ASP_.NET_WEP_API_JWT.DTOs.Auth.AuthTokenDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ASP_.NET_WEP_API_JWT.Controllers.Auth.AuthController",
+    "Method": "RefreshToken",
+    "RelativePath": "api/Auth/RefreshToken",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "ASP_.NET_WEP_API_JWT.DTOs.Auth.AuthTokenDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Job_Site.Controllers.ChatController",
+    "Method": "SendMessage",
+    "RelativePath": "api/Chat/SendMessage",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "message",
+        "Type": "Job_Site.Controllers.ChatMessage",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Job_Site.Controllers.EmployerController",
+    "Method": "ChangePassword",
+    "RelativePath": "api/Employer/{OldPassword}/{NewPassword}/ChangePassword",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "OldPassword",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "NewPassword",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Job_Site.Controllers.EmployerController",
+    "Method": "AddAdvertisement",
+    "RelativePath": "api/Employer/AddAdvertisement",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "employerJobList",
+        "Type": "Job_Site.Dtos.EmployerJobListDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Job_Site.Controllers.EmployerController",
+    "Method": "ChangeBlock",
+    "RelativePath": "api/Employer/ChangeBlock",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "statusCode",
+        "Type": "Job_Site.Dtos.StatusCodeDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Job_Site.Controllers.EmployerController",
+    "Method": "ChangeStatus",
+    "RelativePath": "api/Employer/ChangeStatus",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "statusCode",
+        "Type": "Job_Site.Dtos.StatusCodeDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Job_Site.Controllers.EmployerController",
+    "Method": "GetAdvertEmployerById",
+    "RelativePath": "api/Employer/GetAdvertEmployerById",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idRequest",
+        "Type": "Job_Site.Models.IdRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Job_Site.Dtos.EmployerJobListDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Job_Site.Controllers.EmployerController",
+    "Method": "GetAllAdvertisement",
+    "RelativePath": "api/Employer/GetAllAdvertisement",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Job_Site.Dtos.EmployerJobListDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Job_Site.Controllers.EmployerController",
+    "Method": "Login",
+    "RelativePath": "api/Employer/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginReguestDto",
+        "Type": "Job_Site.Dtos.LoginReguestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Job_Site.Controllers.EmployerController",
+    "Method": "Register",
+    "RelativePath": "api/Employer/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SurName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Gender",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Age",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Phone",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Role",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProfileImagePath",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Job_Site.Controllers.EmployerController",
+    "Method": "RemoveAdvertisement",
+    "RelativePath": "api/Employer/RemoveAdvertisement",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idRequest",
+        "Type": "Job_Site.Models.IdRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Job_Site.Controllers.EmployerController",
+    "Method": "ToApplyAdvertisement",
+    "RelativePath": "api/Employer/ToApplyAdvertisement",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Job_Site.Controllers.EmployerController",
+    "Method": "UpdateAdvertisement",
+    "RelativePath": "api/Employer/UpdateAdvertisement",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "employerJobList",
+        "Type": "Job_Site.Dtos.EmployerJobListDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Job_Site.Controllers.HomeController",
+    "Method": "AllAdvertCount",
+    "RelativePath": "api/Home/AllAdvertCount",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Job_Site.Controllers.HomeController",
+    "Method": "ChangeImage",
+    "RelativePath": "api/Home/ChangeImage",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ContentType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ContentDisposition",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Headers",
+        "Type": "Microsoft.AspNetCore.Http.IHeaderDictionary",
+        "IsRequired": false
+      },
+      {
+        "Name": "Length",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FileName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Job_Site.Controllers.HomeController",
+    "Method": "GetAllPermissionEmployers",
+    "RelativePath": "api/Home/GetAllPermissionEmployers",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "requestBody",
+        "Type": "Job_Site.Pagination.RequestBody",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Job_Site.Dtos.EmployerJobListDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Job_Site.Controllers.HomeController",
+    "Method": "GetAllPermissionWorkers",
+    "RelativePath": "api/Home/GetAllPermissionWorkers",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "requestBody",
+        "Type": "Job_Site.Pagination.RequestBody",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Job_Site.Dtos.WorkerJobLisDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Job_Site.Controllers.HomeController",
+    "Method": "GetUserAbout",
+    "RelativePath": "api/Home/GetUserAbout",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Job_Site.Dtos.UserDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Job_Site.Controllers.PasswordController",
+    "Method": "ChangePassword",
+    "RelativePath": "api/Password/ChangePassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "passwordChange",
+        "Type": "Job_Site.Dtos.PasswordChangeDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Job_Site.Controllers.PasswordController",
+    "Method": "ConFirmCode",
+    "RelativePath": "api/Password/ConFirmCode",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "code",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Job_Site.Controllers.PasswordController",
+    "Method": "ForgetChangePassword",
+    "RelativePath": "api/Password/ForgetChangePassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newPassword",
+        "Type": "Job_Site.Dtos.Password.NewPassword",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Job_Site.Controllers.PasswordController",
+    "Method": "ForgetPassword",
+    "RelativePath": "api/Password/ForgetPassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "controlUser",
+        "Type": "Job_Site.Dtos.Password.ControlUser",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Job_Site.Controllers.PasswordController",
+    "Method": "GeneratorCode",
+    "RelativePath": "api/Password/GeneratorCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Job_Site.Controllers.WorkerController",
+    "Method": "AddAdvertisement",
+    "RelativePath": "api/Worker/AddAdvertisement",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "workerJobLisDto",
+        "Type": "Job_Site.Dtos.WorkerJobLisDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Job_Site.Controllers.WorkerController",
+    "Method": "ChangePassword",
+    "RelativePath": "api/Worker/ChangePassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Job_Site.Controllers.WorkerController",
+    "Method": "GetAdvertWorkerById",
+    "RelativePath": "api/Worker/GetAdvertWorkerById",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idRequest",
+        "Type": "Job_Site.Models.IdRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Job_Site.Dtos.WorkerJobLisDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Job_Site.Controllers.WorkerController",
+    "Method": "GetAllAdvertisement",
+    "RelativePath": "api/Worker/GetAllAdvertisement",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Job_Site.Controllers.WorkerController",
+    "Method": "GetAllWorkerJobs",
+    "RelativePath": "api/Worker/GetAllWorkerJobs",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Job_Site.Dtos.WorkerJobLisDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Job_Site.Controllers.WorkerController",
+    "Method": "Login",
+    "RelativePath": "api/Worker/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginReguest",
+        "Type": "Job_Site.Dtos.LoginReguestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Job_Site.Controllers.WorkerController",
+    "Method": "Register",
+    "RelativePath": "api/Worker/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SurName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Gender",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Age",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Phone",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Role",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProfileImagePath",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Job_Site.Controllers.WorkerController",
+    "Method": "RemoveAdvertisement",
+    "RelativePath": "api/Worker/RemoveAdvertisement",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idRequest",
+        "Type": "Job_Site.Models.IdRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Job_Site.Controllers.WorkerController",
+    "Method": "ToApplyAdvertisement",
+    "RelativePath": "api/Worker/ToApplyAdvertisement",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Job_Site.Controllers.WorkerController",
+    "Method": "UpdateAdvertisement",
+    "RelativePath": "api/Worker/UpdateAdvertisement",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "workerJobLisDto",
+        "Type": "Job_Site.Dtos.WorkerJobLisDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

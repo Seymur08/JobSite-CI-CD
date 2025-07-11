@@ -1,0 +1,95 @@
+/*  */
+
+#imageLogin {
+    width: 100%;
+    height: 90vh;
+}
+
+.LoginPage form {
+    /* position: absolute; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 30px;
+    gap: 25px;
+    left: 140px;
+    width: 500px;
+    height: 600px;
+    border: 2px solid #13bef2;
+    border-radius: 12px;
+    /* background-color: red; */
+
+    h2 {
+        color: white;
+        font-size: 50px;
+
+    }
+
+}
+
+
+
+
+.LoginPageInput {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    h1 {
+        color: white;
+    }
+
+    input {
+        width: 350px;
+        height: 40px;
+        border-radius: 8px;
+        font-size: 18px;
+        padding-left: 10px;
+    }
+}
+
+
+.LoginPageInput .error {
+
+    color: red;
+    /* color: red;
+    font-size: 0.875rem;
+    margin-top: 4px;
+    font-weight: 500;
+    */
+    width: 350px;
+    height: auto;
+    /* background-color: red; */
+}
+
+.error {
+    color: red;
+    font-size: 18px;
+}
+
+
+
+.LoginPageButton {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    a {
+        color: white;
+    }
+
+    button {
+        width: 350px;
+        height: 40px;
+        border-radius: 8px;
+        font-size: 18px;
+
+    }
+}
+
+.LoginPageButton button:hover {
+    background-color: #1347f2;
+    color: white;
+}

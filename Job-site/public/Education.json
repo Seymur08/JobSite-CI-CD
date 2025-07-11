@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "tehsil": "Natamam təhsil"
+    },
+    {
+        "id": 2,
+        "tehsil": "Orta təhsil"
+    },
+    {
+        "id": 3,
+        "tehsil": "Tam təhsil"
+    },
+    {
+        "id": 4,
+        "tehsil": "Orta Texniki"
+    },
+    {
+        "id": 5,
+        "tehsil": "Ali"
+    }
+]

@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "isQrafiki": "Həftəiçi 5 gün (B.e – C.a)"
+    },
+    {
+        "id": 2,
+        "isQrafiki": "Həftəiçi 6 gün (B.e – Şənbə)"
+    },
+    {
+        "id": 3,
+        "isQrafiki": "Növbəli iş qrafiki"
+    },
+    {
+        "id": 4,
+        "isQrafiki": "Gecə növbəsi"
+    },
+    {
+        "id": 5,
+        "isQrafiki": "Həftə sonu (Şənbə – Bazar)"
+    },
+    {
+        "id": 6,
+        "isQrafiki": "Sərbəst iş qrafiki"
+    },
+    {
+        "id": 7,
+        "isQrafiki": "Uzaqdan (remote) iş qrafiki"
+    },
+    {
+        "id": 8,
+        "isQrafiki": "Layihə əsaslı iş qrafiki"
+    }
+]

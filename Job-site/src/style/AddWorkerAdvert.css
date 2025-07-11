@@ -1,0 +1,197 @@
+.advert-main-head {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    padding-top: 5px;
+    justify-content: space-between;
+    align-items: center;
+    /* padding-right: 155px; */
+    padding-left: 85px;
+    background-color: #4167f2;
+
+
+}
+
+#text-word {
+    color: white;
+    font-size: 25px;
+
+}
+
+.advert-main-head-button {
+
+    width: 150px;
+    height: 35px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 2px solid blue;
+    padding: 5px 10px;
+    color: #4167f2;
+    margin-top: 16px;
+    background-color: wheat;
+}
+
+
+
+.advert-main {
+    display: flex;
+    width: 100%;
+    height: auto;
+    background-color: #2e2e2e;
+    justify-content: center;
+
+}
+
+
+.advert-main-center {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 90%;
+    /* margin-top: 10px;s */
+    border-radius: 10px;
+    /* border: 2px solid blue; */
+
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+}
+
+.advert-main-center-left {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 85vh;
+    border-radius: 10px 0 0 10px;
+    gap: 20px;
+    padding: 0 30px;
+    /* margin-top: 40px; */
+
+    h3,
+    h4 {
+        color: white;
+        font-size: 20px;
+    }
+}
+
+
+
+#input {
+    width: auto;
+    height: 30px;
+    border-radius: 8px;
+    padding-left: 10px;
+    font-size: 18px;
+    background-color: #d5dbde;
+
+
+}
+
+#input::placeholder {
+    color: black;
+}
+
+
+#category {
+    width: auto;
+    height: 30px;
+    border-radius: 8px;
+    padding-left: 10px;
+    font-size: 16px;
+    background-color: #d5dbde;
+}
+
+
+.advert-main-center-right {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 88vh;
+    text-align: center;
+    align-items: flex-end;
+    border-radius: 0 10px 10px 0;
+
+
+}
+
+#Telebler {
+    display: flex;
+    width: 100%;
+    color: white;
+    font-size: 25px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+
+#form-button {
+    width: 120px;
+    height: 35px;
+    border-radius: 8px;
+    background-color: #0037ff;
+    color: white;
+    font-size: 16px;
+    /* margin-right: 5px; */
+    margin-top: 20px;
+
+}
+
+#textarea-right {
+
+    width: 100%;
+    height: 80%;
+    resize: none;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #d5dbde;
+}
+
+.select-salary {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+
+    select {
+        width: 300px;
+        height: 30px;
+        border-radius: 8px;
+        padding-left: 10px;
+        font-size: 18px;
+        background-color: #d5dbde;
+    }
+
+}
+
+.select-gender {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+
+    select {
+        width: 100%;
+        height: 30px;
+        border-radius: 8px;
+        padding-left: 10px;
+        font-size: 18px;
+        background-color: #d5dbde;
+    }
+}
+
+
+.select-age {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    select {
+        width: 300px;
+        height: 30px;
+        border-radius: 8px;
+        padding-left: 10px;
+        font-size: 20px;
+        background-color: #d5dbde;
+    }
+}

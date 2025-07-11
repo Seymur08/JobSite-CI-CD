@@ -1,0 +1,70 @@
+.cardemployer-1 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    /* background-color: red; */
+}
+
+
+.cardwrapper-1 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    height: 100px;
+    gap: 40px;
+    justify-content: center;
+    margin-top: 50px;
+    /* background-color: blue; */
+}
+
+.card-1 {
+    width: 330px;
+    border-radius: 15px;
+    background-color: #FFF;
+    border: 2px solid blue;
+    /* background-color: green; */
+}
+
+
+
+.cardcontent-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding: 20px 14px; */
+    /* gap: 8px; */
+    color: blue;
+    /* background-color: red; */
+
+    /* h4 {
+        margin: 5px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 270px;
+    } */
+
+    h5 {
+        margin: 3px;
+        color: blue;
+        /* background-color: gray; */
+    }
+
+
+    span {
+        color: black;
+    }
+}
+
+
+.category-1 {
+    margin: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 270px;
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: bold;
+}

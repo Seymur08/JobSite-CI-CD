@@ -1,0 +1,77 @@
+.container_table_1 {
+    max-width: 1200px;
+    margin: 30px auto;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background: red; */
+    /* color: wheat; */
+    padding: 10px;
+    border: 2px solid wheat;
+}
+
+.header h2 {
+    /* font-weight: normal; */
+    font-size: 30px;
+    color: wheat;
+}
+
+.actions .btn {
+    background: white;
+    color: #2196f3;
+    border: none;
+    padding: 10px 15px;
+    margin-left: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.actions .btn.export i,
+.actions .btn.add i {
+    margin-right: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #0026cc;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    justify-content: center;
+
+
+}
+
+.user img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.action {
+    font-size: 18px;
+    margin-right: 10px;
+    cursor: pointer;
+}

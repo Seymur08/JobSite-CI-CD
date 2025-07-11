@@ -1,0 +1,154 @@
+.advertising-container-main-center_1 {
+    display: flex;
+    /* top: 0; */
+    /* flex-direction: column; */
+    justify-content: center;
+    gap: 20px;
+    width: auto;
+    height: 650px;
+    flex-wrap: wrap;
+    /* background-color: red; */
+
+}
+
+.advertising-container_1 {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin-top: 25px;
+    width: 90%;
+    /* background-color: rgba(255, 255, 122, 0.2); */
+    /* backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); */
+    /* padding: 16px; */
+    border-radius: 12px;
+    border: 3px solid wheat;
+    gap: 20px;
+    /* border: 2px solid blue; */
+
+    /* a {
+        color: white;
+        margin: 0px;
+        margin-left: 10px;
+        margin-top: 5px;
+        font-size: 28px;
+        font-weight: bold;
+
+    }
+
+    h5 {
+
+        margin-left: 10px;
+        margin-top: 15px;
+        font-size: 16px;
+        color: white;
+
+    } */
+
+}
+
+
+.advertising-container-worker-left {
+    width: 300px;
+    /* background-color: red; */
+    flex-direction: row;
+}
+
+
+
+.advertising-container-worker-left-up {
+    display: flex;
+    width: 300px;
+    /* background-color: blue; */
+    height: 25vh;
+    justify-content: center;
+    /* text-align: center; */
+    align-items: center;
+
+    img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+
+    }
+}
+
+
+
+.advertising-container-worker-left-down {
+    width: 300px;
+    /* background-color: green; */
+    height: 55vh;
+    padding: 0 20px;
+
+    h5 {
+        color: wheat;
+    }
+
+}
+
+
+
+.advertising-container-worker-right {
+    height: 300px;
+    width: auto;
+    margin-top: 20px;
+}
+
+.textarea_1 {
+    width: 800px;
+    height: 500px;
+    resize: none;
+    overflow: auto;
+    padding: 10px;
+    border-radius: 8px;
+
+    /* minHeight: "100px",
+        padding: "10px",
+        fontSize: "16px",
+        border: "1px solid #ccc",
+        borderRadius: "8px", */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.advertising-container-button {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    gap: 20px;
+
+    button {
+        width: 100px;
+        height: 35px;
+        background-color: #0c4df2;
+        color: white;
+        font-size: 16px;
+        border-radius: 10px;
+        border: 1px solid black;
+    }
+}

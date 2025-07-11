@@ -1,0 +1,145 @@
+
+import '../src/style/WorkerMainPage.css'
+import React, { useEffect, useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { GetAllWorkerJobList, RemoveAdvertisement } from '../src/style/redux/WorkerFunction';
+import image from '../src/icons/delete.png'
+import { ConFirmCode, GeneratorCode } from '../src/style/redux/PartnerFunctions';
+import AutoClosePopup from './Toast';
+
+
+function WorkerMainPage() {
+
+    const [showPopup, setShowPopup] = useState(false);
+    const [popupData, setPopupData] = useState("");
+
+
+    const [modal, setmodal] = useState(false);
+    const [id, setid] = useState("");
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const workers = useSelector((state) => state.worker.workerjobs)
+    const userabout = useSelector((state) => state.home.userabout)
+
+    useEffect(() => {
+        dispatch(GetAllWorkerJobList());
+    }, [dispatch])
+
+    const handleDelete = (id) => {
+        setmodal(true);
+        setid(id)
+    }
+
+
+    const handleCancel = () => {
+        setmodal(false);
+    }
+
+    const handleDeleteOk = async () => {
+        await dispatch(RemoveAdvertisement(id));
+        await dispatch(GetAllWorkerJobList());
+        setmodal(false);
+    }
+
+    const handleChangePassword = async () => {
+        await dispatch(GeneratorCode());
+        setShowPopup(true);
+
+    }
+
+    console.log("workers")
+    console.log(workers)
+    console.log("workers")
+
+
+    console.log("userabout")
+    console.log(userabout)
+    console.log("userabout")
+
+
+    useEffect(() => {
+        const foo = async () => {
+            if (popupData.trim() !== "") {
+                var result = await dispatch(ConFirmCode(popupData)).unwrap();
+                if (result) {
+                    navigate("/ChangePasswordPage")
+                }
+
+            }
+        }
+        foo();
+
+    }, [popupData]);
+
+    return (
+        <>
+            <div className='contanier-table-box'>
+                <div className='contanier-table'>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Baxış sayı</th>
+                                <th>Ad Soyad</th>
+                                <th>Kategoriya</th>
+                                <th>Status</th>
+                                <th>Email</th>
+                                <th>Əməliyyatlar </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {Array.isArray(workers) && workers.length > 0 ? (
+                                workers.map((item, index) => (
+                                    <tr key={index}>
+                                        <td>{item.view_Count}</td>
+                                        <td>{item.workerDto.userDto.userName} {item.workerDto.userDto.surName}</td>
+                                        <td>{item.section}</td>
+                                        <td>
+                                            <span className={`status ${item.status === 1 ? 'confirmed' :
+                                                item.status === 2 ? 'rejected' :
+                                                    item.status === 0 ? 'waiting' : 'blocked'}`}>
+                                                {item.status === 1 ? 'Təsdiqlənib' :
+                                                    item.status === 2 ? 'Rədd edilib' :
+                                                        item.status === 0 ? 'Gözləmədə' : 'Bloklanıb'}
+                                            </span>
+                                        </td>
+
+                                        <td>{item.email}</td>
+                                        <td>
+                                            <div className="action-buttons">
+                                                <Link className="btn edit" to={`/WorkerDashboard/EditWorkerPage/${item.id}`}>✏️</Link>
+                                                <div className="btn delete" onClick={() => handleDelete(item.id)}>❌</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                ))
+                            ) : (
+                                <tr>
+                                    <td colSpan="6" style={{ textAlign: 'center', padding: '20px', widows: "auto" }}>
+                                        Heç bir işçi tapılmadı.
+                                    </td>
+                                </tr>
+                            )}
+                        </tbody>
+                    </table>
+                    {modal && (
+                        <div className="modal">
+                            <img src="../src/icons/delete.png" alt="Finder Icon" />
+                            <h2>Silmək istədiyinizə əminsiniz <br /> </h2>
+                            <p>Bu element birdefelik silinəcək.<br />Bu əməliyyatı geri qaytara bilməzsiniz.</p>
+                            <div className="buttons">
+                                <button onClick={handleCancel} className="cancel">Leğv et</button>
+                                <button onClick={handleDeleteOk} className="delete">Sil</button>
+                            </div>
+                        </div>
+                    )}
+                </div>
+            </div>
+
+            {/* <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis mollitia modi nisi molestiae enim cupiditate nulla? Veniam quae natus accusantium!</p> */}
+
+        </>
+    )
+}
+
+export default WorkerMainPage

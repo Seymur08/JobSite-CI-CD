@@ -1,0 +1,136 @@
+.chat-container {
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(10px);
+
+}
+
+.chat-window {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 350px;
+    height: 355px;
+    z-index: 1000;
+    background-color: white;
+    border-radius: 12px;
+    /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chat-header {
+    background: #2a2f45;
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+
+.chat-header .profile-pic {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.chat-header .close-btn {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.chat-body {
+    padding: 10px;
+    flex: 1;
+    overflow-y: auto;
+    overflow-anchor: auto;
+}
+
+.message {
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.message.me {
+    text-align: left;
+}
+
+.message .time {
+    font-size: 0.75em;
+    color: gray;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.message .name {
+    font-size: 1.0em;
+    color: #555;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.bubble {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 16px;
+    max-width: 80%;
+}
+
+.me .bubble {
+    background: #0473f1c7;
+    color: white;
+    border-bottom-left-radius: 0;
+}
+
+.other .bubble {
+    color: black;
+    border-bottom-right-radius: 0;
+    width: auto;
+    background-color: rgba(12, 247, 24, 0.829);
+}
+
+.chat-input {
+    border-top: 1px solid #ccc;
+    display: flex;
+    padding: 8px;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+
+.chat-input button {
+    background: #1976d2;
+    color: white;
+    border: none;
+    padding: 0 12px;
+    margin-left: 8px;
+    border-radius: 20px;
+    cursor: pointer;
+}

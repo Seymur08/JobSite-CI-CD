@@ -1,0 +1,192 @@
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 35px;
+    background-color: #242738;
+    height: 70px;
+
+}
+
+.site-section-left {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+
+    a {
+        margin-left: 10px;
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        font-size: 20px;
+        transition: color 0.3s ease;
+        color: white;
+    }
+
+    select {
+        width: 250px;
+        height: 30px;
+        border-radius: 12px;
+        border: 1px solid blue;
+        padding-left: 5px;
+        font-size: 15px;
+    }
+}
+
+.site-section-right {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+
+    a {
+        margin-right: 25px;
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        font-size: 20px;
+        transition: color 0.3s ease;
+        color: white;
+
+    }
+
+    select {
+        width: 60px;
+        height: 30px;
+        border-radius: 12px;
+        border: 1px solid blue;
+        padding-left: 5px;
+        font-size: 15px;
+    }
+
+}
+
+#Job-Site-Name {
+    margin-left: 30px;
+    font-size: 35px;
+
+}
+
+footer {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    background-color: #242738;
+
+}
+
+
+.section-link-site {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+
+    a {
+        font-size: 25px;
+        color: white;
+    }
+}
+
+
+.section-link {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+
+    div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    img {
+        width: 30px;
+        height: 30px;
+    }
+
+    a {
+        font-size: 20px;
+        color: white;
+    }
+
+}
+
+.profile-name {
+    display: flex;
+    width: fit-content;
+    height: 50px;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-img {
+    display: flex;
+    align-items: flex-end;
+    width: 45px;
+    height: 45px;
+    padding-top: 10px;
+    position: relative;
+    justify-content: center;
+
+    img {
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        object-fit: cover;
+    }
+}
+
+.profile-active {
+    display: flex;
+    width: 10px;
+    height: 10px;
+    /* background-color: rgb(7, 255, 7); */
+    position: absolute;
+    border-radius: 5px;
+    right: 0;
+    bottom: 0;
+}
+
+.profile-active.green {
+    background-color: rgb(7, 255, 7);
+}
+
+.profile-active.red {
+    background-color: red;
+}
+
+
+
+
+
+
+
+
+
+/* ##################################################################### */
+
+.site-section-right a:hover,
+.site-section-right select:hover {
+    transform: scale(1.2);
+}
+
+
+.site-section-left select:hover {
+    transform: scale(1.1);
+    border: 1px solid blue;
+}
+
+.site-section-left a:hover {
+    transform: scale(1.2);
+}
+
+.section-link-site a:hover {
+    transform: scale(1.2);
+}
+
+.section-link div:hover {
+    transform: scale(1.2);
+}

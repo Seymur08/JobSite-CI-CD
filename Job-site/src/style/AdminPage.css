@@ -1,0 +1,166 @@
+.Admin-Page {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(69, 159, 211, 0.501);
+    width: auto;
+    height: 100px;
+    border-left: 2px solid black;
+}
+
+.top-box {
+    display: flex;
+    /* margin-top: 20px; */
+    align-items: center;
+    gap: 80px;
+
+}
+
+
+.top-box-in_1 {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: #489e51;
+    gap: 10px;
+    width: auto;
+    height: 80px;
+    border-radius: 12px;
+    border: 1px solid white;
+}
+
+.top-box-in_2 {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: #b4964e;
+    gap: 10px;
+    width: auto;
+    height: 80px;
+    border-radius: 12px;
+    border: 1px solid white;
+
+}
+
+.top-box-in_3 {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: #c44747;
+    gap: 10px;
+    width: auto;
+    height: 80px;
+    border-radius: 12px;
+    border: 1px solid white;
+
+}
+
+
+#image {
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+}
+
+
+
+.top-box-in-world {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    /* gap: 1s0px; */
+    width: auto;
+    height: 95%;
+    /* background-color: #1143ad; */
+    color: rgb(11, 11, 11);
+    border-radius: 12px;
+    /* border: 1px solid grey; */
+    text-align: left;
+
+}
+
+
+h1 {
+    margin: 0;
+    font-size: 20px;
+    /* background-color: red; */
+
+}
+
+h2 {
+    margin: 0;
+    padding-left: 10px;
+    font-size: 20px;
+    /* background-color: green; */
+}
+
+/* ###################################################### */
+
+.middle-box {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    align-items: center;
+    background-color: #2064f7;
+    height: 239px;
+
+}
+
+.link {
+    color: white;
+}
+
+.link-button {
+    color: white;
+    /* background-color: transparent; */
+}
+
+.link-button:hover {
+    color: #a6a9ad;
+    transform: scale(1.05)
+}
+
+
+
+.middle-box-in {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 20px;
+    width: 420px;
+    height: 150px;
+    border-radius: 12px;
+    border: 1px solid wheat;
+    background-color: #1143ad;
+    color: white;
+
+
+    img {
+        margin-left: 10px;
+    }
+}
+
+.middle-box-in h1 {
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+
+
+.link:hover {
+    color: #a6a9ad;
+    transform: scale(1.05)
+}
