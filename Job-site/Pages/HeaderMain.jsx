@@ -7,10 +7,10 @@ import '../src/style/Header-main.css';
 import photo from '../src/icons/magnifying-glass.png';
 // import Employer from './main';
 import Search from './search.jsx';
-import cities from '../public/Cities.json'
-import salary from '../public/Salary.json'
-import age from '../public/Age.json'
-import time from '../public/Time.json'
+import cities from '../src/data/Cities.json'
+import salary from '../src/data/Salary.json'
+import age from '../src/data/Age.json'
+import time from '../src/data/Time.json'
 
 function HeaderMain() {
 

@@ -7,9 +7,9 @@ import { Link, useParams } from 'react-router-dom';
 // import { GetAllCategory } from '../src/style/redux/AdminFunctions';
 // import { UpdateWorkerjob } from '../src/style/redux/AllFuntions';
 // import { AddNewAdvertWorker, GetAllCategory } from '../src/style/redux/AllFuntions';
-import data from '../public/WorkExperience.json';
-import age from '../public/Age.json';
-import salary from '../public/Salary.json';
+import data from '../src/data/WorkExperience.json';
+import age from '../src/data/Age.json';
+import salary from '../src/data/Salary.json';
 import { UpdateWorkerjob } from '../src/style/redux/WorkerFunction';
 
 

@@ -7,11 +7,11 @@ import { Link, useNavigate } from 'react-router-dom';
 import { GetAllCategoryWorker } from '../src/style/redux/AdminFunctions';
 // import { AddNewAdvertWorker } from '../src/style/redux/AllFuntions';
 // import { AddNewAdvertWorker, GetAllCategory } from '../src/style/redux/AllFuntions';
-import data from '../public/WorkExperience.json';
-import age from '../public/Age.json';
-import salary from '../public/Salary.json';
-import Cities from '../public/Cities.json';
-import Education from '../public/Education.json';
+import data from '../src/data/WorkExperience.json';
+import age from '../src/data/Age.json';
+import salary from '../src/data/Salary.json';
+import Cities from '../src/data/Cities.json';
+import Education from '../src/data/Education.json';
 
 import { AddNewWorkerAdvert } from '../src/style/redux/WorkerFunction';
 

@@ -5,12 +5,11 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { GetAllCategoryEmployer } from '../src/style/redux/AdminFunctions';
-import data from '../public/WorkExperience.json';
-import age from '../public/Age.json';
-import salary from '../public/Salary.json';
-import Work_time from '../public/Work_time.json';
-import Work_schedule from '../public/Work_schedule.json';
-import city from '../public/Cities.json'
+import data from '../src/data/WorkExperience.json';
+import age from '../src/data/Age.json';
+import salary from '../src/data/Salary.json';
+import Work_schedule from '../src/data/Work_schedule.json';
+import city from '../src/data/Cities.json'
 
 import { AddNewAdvert } from '../src/style/redux/EmployerFuntion';
 

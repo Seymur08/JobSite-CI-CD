@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 // import { GetAllCategory } from '../src/style/redux/AdminFunctions';
 import { Link, useParams } from 'react-router-dom';
-import data from '../public/WorkExperience.json';
-import age from '../public/Age.json';
-import salary from '../public/Salary.json';
-import time from '../public/Time.json';
+import data from '../src/data/WorkExperience.json';
+import age from '../src/data/Age.json';
+import salary from '../src/data/Salary.json';
+import time from '../src/data/Time.json';
 import { RemoveAdvertisementEmp, UpdateEmployerJob } from '../src/style/redux/EmployerFuntion';
 import "../src/style/EditEmployerPage.css"
 
