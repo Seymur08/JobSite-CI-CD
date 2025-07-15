@@ -43,7 +43,6 @@ jobs:
           sudo chmod +x /usr/local/bin/docker-compose
 
       - name: Run Docker Compose
-        working-directory: ./Job_Site
         run: docker-compose -f docker-compose.yml up -d
 
 
