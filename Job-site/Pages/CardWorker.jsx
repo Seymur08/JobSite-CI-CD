@@ -9,7 +9,7 @@ import { jwtDecode } from 'jwt-decode';
 import isTokenValid from '../src/style/redux/ControlToken';
 import { GetAllPermissionWorkers } from '../src/style/redux/HomeFunction';
 import Pagination from './Pagination';
-import Search from './Search';
+import Search from './search.jsx';
 
 function CardWorker() {
     const [searchParams, setSearchParams] = useSearchParams();

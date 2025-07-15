@@ -6,7 +6,7 @@ import { useNavigate, useSearchParams } from 'react-router-dom';
 import isTokenValid from '../src/style/redux/ControlToken';
 // import jwtDecode from 'jwt-decode';
 import axios from 'axios';
-import Search from './Search';
+import Search from './search.jsx';
 import Pagination from './Pagination';
 import { GetAllPermissionEmployers } from '../src/style/redux/HomeFunction';
 import { useUserChat } from './UserChatContext';
