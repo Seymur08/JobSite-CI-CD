@@ -43,7 +43,7 @@ jobs:
           sudo chmod +x /usr/local/bin/docker-compose
 
       - name: 🚀 Run Docker Compose
-        run: docker-compose -f Job_Site/Docker-compose.yml up -d
+        run: docker-compose -f ../Docker-compose.yml up -d
 
       - name: ⏳ Wait for services
         run: sleep 20
