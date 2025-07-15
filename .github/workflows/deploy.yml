@@ -1,50 +1,45 @@
-
 name: CI/CD for Job-Site
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  build-and-deploy:
+  docker-build-push:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+    - name: Copy code
+      uses: actions/checkout@v4
 
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: '8.0.x'
+    - name: Docker Build
+      uses: docker/setup-buildx-action@v3
 
-      - name: Restore and build backend
-        working-directory: ./Job_Site/Job_Site
-        run: |
-          dotnet restore
-          dotnet build --configuration Release
-          dotnet publish -c Release -o ./publish
+    - name: Docker Hub login
+      uses: docker/login-action@v3
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20.19.3'
+    # Backend image build və push
+    - name: 🛠️ Backend image build
+      run: |
+        docker build -t seymur08/jobsite-api ./Job_Site
+        docker push seymur08/jobsite-api
 
-      - name: Install and build frontend
-        working-directory: ./Job-site
-        run: |
-          npm install
-          npm run build
+    # Frontend image build və push
+    - name: 🎨 Frontend image build
+      run: |
+        docker build -t seymur08/jobsite-frontend ./Job-site
+        docker push seymur08/jobsite-frontend
 
-      - name: Run Docker Compose
-        working-directory: ./Job_Site
-        run: docker-compose -f docker-compose.yml up -d
 
-      - name: Wait for services to start
-        run: sleep 20
 
-      - name: Show running containers
-        run: docker ps
+
 
 
 
