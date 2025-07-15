@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { GetAllCategoryWorker } from '../src/style/redux/AdminFunctions';
 import Cities from '../src/data/Cities.json';
 import Salary from '../src/data/Salary.json';
+// import Salary from '../src/data/Salary.json';
 
 function Search({ onSelect }) {
     const dispatch = useDispatch();
