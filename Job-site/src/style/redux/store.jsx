@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
 // import AdminSlice from './AdminSlice.jsx'
-import EmployerSlice from './EmployerSlice.Jsx'
+import EmployerSlice from './EmployerSlice.jsx'
 import WorkerSlice from './WorkerSlice'
 import HomeSlice from './HomeSlice'
 // import adminReducer from '../redux/appslice'
