@@ -5,7 +5,6 @@ on:
     branches: ["main"]
 
 jobs:
-      
   build-and-deploy:
     runs-on: ubuntu-latest
 
@@ -14,23 +13,26 @@ jobs:
         node-version: ['20.19.3']
         
     steps:
-      - name: Job-Site Repository
+      - name: 🧾 Checkout repository
         uses: actions/checkout@v4
 
-      - name: Job-Site Node.js ${{ matrix.node-version }}
+      - name: 🧱 Setup Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
 
-         # Backend image build və push
-      - name: 🛠️ Backend image build
+      - name: 🔐 Docker Hub login
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_TOKEN }}
+
+      - name: 🛠️ Build and Push Backend Docker image
         run: |
           docker build -t seymur08/jobsite-api ./Job_Site
           docker push seymur08/jobsite-api
 
-      # Frontend image build və push
-      - name: 🎨 Frontend image build
+      - name: 🎨 Build and Push Frontend Docker image
         run: |
           docker build -t seymur08/jobsite-frontend ./Job-site
           docker push seymur08/jobsite-frontend
-
