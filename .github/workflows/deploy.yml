@@ -5,23 +5,120 @@ on:
     branches: ["main"]
 
 jobs:
-      
-  build-and-deploy:
+  build-and-test:
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
         node-version: ['20.19.3']
-        
+
     steps:
-      - name: Job-Site Repository
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Job-Site Node.js ${{ matrix.node-version }}
+      # ----- BACKEND -----
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x' # və ya istifadə etdiyin versiya
+
+      - name: Restore API Dependencies
+        working-directory: ./Job_Site
+        run: dotnet restore
+
+      - name: Build API
+        working-directory: ./Job_Site
+        run: dotnet build --configuration Release
+
+      - name: Publish API
+        working-directory: ./Job_Site
+        run: dotnet publish -c Release -o ./publish
+
+      # ----- FRONTEND -----
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Api Dependency Install
-        working-directory: ./api
+      - name: Install Frontend Dependencies
+        working-directory: ./Job-site
         run: npm install
+
+      - name: Build Frontend
+        working-directory: ./Job-site
+        run: npm run build
+
+      # ----- DOCKER COMPOSE İLƏ TEST -----
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Run Docker Compose
+        run: docker-compose up -d
+        # Əgər docker-compose.yml başqa yerdədirsə:
+        # run: docker-compose -f ./docker/docker-compose.yml up -d
+
+      - name: Wait for services to start
+        run: sleep 20 # servis yüklənməsi üçün gözləmə
+
+      - name: Check API health
+        run: curl http://localhost:5156/swagger || exit 1
+
+      - name: Show Running Containers
+        run: docker ps
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# name: CI/CD for Job-Site
+
+# on:
+#   push:
+#     branches: ["main"]
+
+# jobs:
+      
+#   build-and-deploy:
+#     runs-on: ubuntu-latest
+
+#     strategy:
+#       matrix:
+#         node-version: ['20.19.3']
+        
+#     steps:
+#       - name: Job-Site Repository
+#         uses: actions/checkout@v4
+
+#       - name: Job-Site Node.js ${{ matrix.node-version }}
+#         uses: actions/setup-node@v4
+#         with:
+#           node-version: ${{ matrix.node-version }}
+
+#       - name: Api Dependency Install
+#         working-directory: ./api
+#         run: npm install
+
+#       - name: Job_Site Dependency Install
+#         working-directory: ./Job_Site
+#         run: dotnet restore
+
