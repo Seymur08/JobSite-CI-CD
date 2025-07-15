@@ -44,7 +44,7 @@ jobs:
 
       - name: Run Docker Compose
         working-directory: ./Job_Site
-        run: docker-compose -f Docker-compose.yml up -d
+        run: docker-compose -f docker-compose.yml up -d
 
 
       - name: ⏳ Wait for services
