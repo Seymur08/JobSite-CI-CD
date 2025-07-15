@@ -23,5 +23,38 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Api Dependency Install
-        working-directory: ./api
+        working-directory: ./Job_site
         run: npm install
+
+
+
+
+        name: CI/CD for Job-Site
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  docker-build-push:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Copy code
+      uses: actions/checkout@v4
+
+    # Backend image build və push
+    - name: 🛠️ Backend image build
+      run: |
+        docker build -t seymur08/jobsite-api ./Job_Site
+        docker push seymur08/jobsite-api
+
+    # Frontend image build və push
+    - name: 🎨 Frontend image build
+      run: |
+        docker build -t seymur08/jobsite-frontend ./Job-site
+        docker push seymur08/jobsite-frontend
