@@ -6,7 +6,7 @@ import '../src/style/Category.css';
 import '../src/style/Header-main.css';
 import photo from '../src/icons/magnifying-glass.png';
 // import Employer from './main';
-import Search from './Search';
+import Search from './search.jsx';
 import cities from '../public/Cities.json'
 import salary from '../public/Salary.json'
 import age from '../public/Age.json'
