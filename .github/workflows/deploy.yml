@@ -13,26 +13,26 @@ jobs:
         node-version: ['20.19.3']
         
     steps:
-      - name: 🧾 Checkout repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: 🧱 Setup Node.js ${{ matrix.node-version }}
+      - name: Setup Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: 🔐 Docker Hub login
+      - name: Docker Hub login
         uses: docker/login-action@v3
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_TOKEN }}
+          username: "${{ secrets.DOCKER_USERNAME }}"
+          password: "${{ secrets.DOCKER_TOKEN }}"
 
-      - name: 🛠️ Build and Push Backend Docker image
+      - name: Build and Push Backend Docker image
         run: |
           docker build -t seymur08/jobsite-api ./Job_Site
           docker push seymur08/jobsite-api
 
-      - name: 🎨 Build and Push Frontend Docker image
+      - name: Build and Push Frontend Docker image
         run: |
           docker build -t seymur08/jobsite-frontend ./Job-site
           docker push seymur08/jobsite-frontend
