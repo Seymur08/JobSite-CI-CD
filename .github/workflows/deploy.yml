@@ -26,7 +26,7 @@ jobs:
         uses: actions/setup-node@v4
 
       - name: Install API Dependencies
-        working-directory: ./api
+        working-directory: ./Job_Site
         run: npm install
 
       # - name: Run unit tests
@@ -34,7 +34,7 @@ jobs:
       #   run: npm test
 
       - name: Install Frontend Dependencies
-        working-directory: ./frontend
+        working-directory: ./Job_site
         run: npm install
 
   build-and-push:
