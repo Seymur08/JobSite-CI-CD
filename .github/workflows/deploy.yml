@@ -3,36 +3,188 @@ name: CI/CD for Job-Site
 on:
   push:
     branches: ["main"]
+  pull_request:
+    branches: ["main"]
+  workflow_dispatch:
+
+env:
+  REGISTRY: gchr.io
+  IMAGE_NAME: ${{ github.repository }}
 
 jobs:
-  build-and-deploy:
+  test:
+    if: github.event_name == 'push'
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
         node-version: ['20.19.3']
-        
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Setup Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
-        with:
-          node-version: ${{ matrix.node-version }}
 
-      - name: Docker Hub login
-        uses: docker/login-action@v3
-        with:
-          username: "${{ secrets.DOCKER_USERNAME }}"
-          password: "${{ secrets.DOCKER_TOKEN }}"
+      - name: Install API Dependencies
+        working-directory: ./api
+        run: npm install
 
+      # - name: Run unit tests
+      #   working-directory: ./api
+      #   run: npm test
+
+      - name: Install Frontend Dependencies
+        working-directory: ./frontend
+        run: npm install
+
+  build-and-push:
+    if: github.event_name == 'push'
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Login to Docker Hub Registry
+        run: echo "${{ secrets.DOCKER_TOKEN }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+
+      # - name: API image build and push
+      #   run: |
+      #     docker build -t ${{ secrets.DOCKER_USERNAME }}/time-app-api ./api
+      #     docker push ${{ secrets.DOCKER_USERNAME }}/time-app-api
+
+      # - name: Front image build and push
+      #   run: |
+      #     docker build -t ${{ secrets.DOCKER_USERNAME }}/time-app-front ./frontend
+      #     docker push ${{ secrets.DOCKER_USERNAME }}/time-app-front
+
+
+      # - name: Build and Push Backend Docker image
+      #   run: |
+      #     docker build -t  ${{ secrets.DOCKER_USERNAME }} ./Job_Site
+      #     docker push ${{ secrets.DOCKER_USERNAME }}/jobsite-api
+
+      # - name: Build and Push Frontend Docker image
+      #   run: |
+      #     docker build -t ${{ secrets.DOCKER_USERNAME }} ./Job-site
+      #     docker push ${{ secrets.DOCKER_USERNAME }}/jobsite-frontend
       - name: Build and Push Backend Docker image
         run: |
-          docker build -t seymur08/jobsite-api ./Job_Site
-          docker push seymur08/jobsite-api
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/jobsite-api ./Job_Site
+          docker push ${{ secrets.DOCKER_USERNAME }}/jobsite-api
 
       - name: Build and Push Frontend Docker image
         run: |
-          docker build -t seymur08/jobsite-frontend ./Job-site
-          docker push seymur08/jobsite-frontend
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/jobsite-frontend ./Job-site
+          docker push ${{ secrets.DOCKER_USERNAME }}/jobsite-frontend
+
+
+          
+
+  deploy:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: VPS Deploy
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.AZURE_VM_HOST }}
+          username: ${{ secrets.AZURE_VM_USERNAME }}
+          key: ${{ secrets.AZURE_VM_SSH_KEY }}
+          port: 22
+          
+          script: |
+            if [ ! -d "/app/Seymur_JobGate/.git" ]; then
+             git clone https://github.com/${{github.repository}} /app/Seymur_JobGate
+            fi
+
+            cd /app/Seymur_JobGate
+            git pull origin main
+
+            docker compose pull
+            docker compose down
+            docker compose up -d
+            docker image prune -f
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# name: CI/CD for Job-Site
+
+# on:
+#   push:
+#     branches: ["main"]
+#   pull_request:
+#     branches: ["main"]
+#   workflow_dispatch:
+
+# env:
+#   REGISTERY: gchr.io
+#   IMAGE_NAME: ${{github.repository}}
+
+# jobs:
+#   build-and-deploy:
+#     if: github.event_name == 'workflow_dispatch'
+#     runs-on: ubuntu-latest
+
+#     strategy:
+#       matrix:
+#         node-version: ['20.19.3']
+        
+#     steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@v4
+
+#       - name: Setup Node.js ${{ matrix.node-version }}
+#         uses: actions/setup-node@v4
+#         with:
+#           node-version: ${{ matrix.node-version }}
+
+#       - name: Docker Hub login
+#         uses: docker/login-action@v4
+#         with:
+#           username: "${{ secrets.DOCKER_USERNAME }}"
+#           password: "${{ secrets.DOCKER_TOKEN }}"
+
+#       - name: Build and Push Backend Docker image
+#         run: |
+#           docker build -t seymur08/jobsite-api ./Job_Site
+#           docker push seymur08/jobsite-api
+
+#       - name: Build and Push Frontend Docker image
+#         run: |
+#           docker build -t seymur08/jobsite-frontend ./Job-site
+#           docker push seymur08/jobsite-frontend
