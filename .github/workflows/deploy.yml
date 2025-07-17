@@ -34,7 +34,7 @@ jobs:
       #   run: npm test
 
       - name: Install Frontend Dependencies
-        working-directory: ./Job_site
+        working-directory: ./Job-site
         run: npm install
 
   build-and-push:
