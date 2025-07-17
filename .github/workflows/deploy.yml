@@ -91,14 +91,14 @@ jobs:
       - name: VPS Deploy
         uses: appleboy/ssh-action@v1
         with:
-          host: ${{ secrets.AZURE_VM_HOST }}
-          username: ${{ secrets.AZURE_VM_USERNAME }}
-          key: ${{ secrets.AZURE_VM_SSH_KEY }}
+          host: ${{ secrets.AZURE_HOST }}
+          username: ${{ secrets.AZURE_USERNAME }}
+          key: ${{ secrets.AZURE_SSH_KEY }}
           port: 22
           
           script: |
             if [ ! -d "/app/Seymur_JobGate/.git" ]; then
-             git clone https://github.com/${{github.repository}} /app/Seymur_JobGate
+             git clone https://github.com/${{ github.repository }} /app/Seymur_JobGate
             fi
 
             cd /app/Seymur_JobGate
