@@ -75,13 +75,11 @@ jobs:
           port: 22
           
           script: |
-            mkdir -p /app/Seymur
-
-            if [ ! -d "/app/Seymur/JobGate/.git" ]; then
-             git clone https://github.com/${{ github.repository }} /app/Seymur/JobGate
+            if [ ! -d "/app/Seymur_JobGate/.git" ]; then
+             git clone https://github.com/${{ github.repository }} /app/Seymur_JobGate
             fi
 
-            cd /app/Seymur/JobGate
+            cd /app/Seymur_JobGate
             git pull origin main
 
             docker compose pull
